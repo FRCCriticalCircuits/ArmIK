@@ -6,6 +6,12 @@ import time
 # Lengths
 y1, y2, y3 = 1.05, 1, 1.20
 
+# Points to test
+Px = 1              # Fixed x
+Py_start = 1.5
+Py_end = 3.0
+Py_step = 0.1
+
 # Boundary
 bounds = [(-160 * np.pi / 180, 160 * np.pi / 180), (-160 * np.pi / 180, 160 * np.pi / 180), (-180 * np.pi / 180, 180 * np.pi / 180)]
 
@@ -25,11 +31,11 @@ colors = ['y', 'r', 'g', 'b', 'm', 'c']
 # Timing
 total_time = 0
 
-for i, Py in enumerate(np.arange(1, 4.0, 0.1)):
+for i, Py in enumerate(np.arange(Py_start, Py_end, Py_step)):
     start_time = time.time()
     
     # Finding Solution
-    result = minimize(objective, initial_guess, args=(1, Py), bounds=bounds)
+    result = minimize(objective, initial_guess, args=(Px, Py), bounds=bounds)
     end_time = time.time()
     elapsed_time = end_time - start_time
     total_time += elapsed_time
@@ -67,9 +73,9 @@ plt.show()
 # Output
 print("Total optimization time: {:.2f} seconds".format(total_time))
 print("Optimal angles for each position:")
-for Py in np.arange(1.5, 3.0, 0.1):
+for Py in np.arange(Py_start, Py_end, Py_step):
     start_time = time.time()
-    result = minimize(objective, initial_guess, args=(1, Py), bounds=bounds)
+    result = minimize(objective, initial_guess, args=(Px, Py), bounds=bounds)
     end_time = time.time()
     elapsed_time = end_time - start_time
     theta1_opt, theta2_opt, theta3_opt = result.x

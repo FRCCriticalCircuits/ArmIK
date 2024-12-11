@@ -1,4 +1,4 @@
-IK codes for 3-Joints Arm, pertend offset on x-axis for each joints and x/y offset to the center of robot is zero \
+IK codes for 3-Joints Arm, pertend offset on x-axis for each joints and x/y offset to the center of robot is zero
 
 `./threeJoints/armDemo` and `./threeJoints/armCustom` are for three-joints arm
 

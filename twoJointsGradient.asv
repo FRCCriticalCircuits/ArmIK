@@ -1,0 +1,9 @@
+function[] = objective(angles, Px, Py, y1, y2)
+    theta1 = angles(1);
+    theta2 = angles(2);
+    
+    Px_estimate = -y1 * sin(theta1) - y2 * sin(theta1 + theta2);
+    Py_estimate = y1 * cos(theta1) + y2 * cos(theta1 + theta2);
+    
+    loss = sqrt((Px - Px_estimate)^2 + (Py - Py_estimate)^2);
+end

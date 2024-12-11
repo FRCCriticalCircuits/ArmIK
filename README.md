@@ -10,3 +10,6 @@ Points with increasing Y-coordinate for three Joints codes:
 Points with increasing Y-coordinate for two Joints (plus one horizontal joint) codes:
 ![image](https://github.com/FRCCriticalCircuits/ArmIK/blob/main/fig/fig2.png?raw=true)
 ![image](https://github.com/FRCCriticalCircuits/ArmIK/blob/main/fig/fig3.png?raw=true)
+![image](https://github.com/FRCCriticalCircuits/ArmIK/blob/main/fig/fig4.png?raw=true)
+
+Matlab and Python codes except Kinematics Functions are AI generated
